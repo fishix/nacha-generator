@@ -2,7 +2,7 @@
 
 namespace Nacha\Record;
 
-use Nacha\Field\String;
+use Nacha\Field\StringUtil;
 use Nacha\Field\Number;
 use Nacha\Field\RoutingNumber;
 use Nacha\Field\FileIdModifier;
@@ -56,11 +56,11 @@ class FileHeader {
 		return $this;
 	}
 	public function setFileCreationDate($fileCreationDate) {
-		$this->fileCreationDate = new String($fileCreationDate, 6);
+		$this->fileCreationDate = new StringUtil($fileCreationDate, 6);
 		return $this;
 	}
 	public function setFileCreationTime($fileCreationTime) {
-		$this->fileCreationTime = new String($fileCreationTime, 4);
+		$this->fileCreationTime = new StringUtil($fileCreationTime, 4);
 		return $this;
 	}
 	public function setFileIdModifier($fileIdModifier) {
@@ -80,15 +80,15 @@ class FileHeader {
 		return $this;
 	}
 	public function setImmediateDestinationName($immediateDestinationName) {
-		$this->immediateDestinationName = new String($immediateDestinationName, 23);
+		$this->immediateDestinationName = new StringUtil($immediateDestinationName, 23);
 		return $this;
 	}
 	public function setImmediateOriginName($immediateOriginName) {
-		$this->immediateOriginName = new String($immediateOriginName, 23);
+		$this->immediateOriginName = new StringUtil($immediateOriginName, 23);
 		return $this;
 	}
 	public function setReferenceCode($referenceCode) {
-		$this->referenceCode = new String($referenceCode, 8);
+		$this->referenceCode = new StringUtil($referenceCode, 8);
 		return $this;
 	}
 

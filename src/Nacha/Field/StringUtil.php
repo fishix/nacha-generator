@@ -2,7 +2,7 @@
 
 namespace Nacha\Field;
 
-class String {
+class StringUtil {
 
 	protected $value;
 	protected $length;
